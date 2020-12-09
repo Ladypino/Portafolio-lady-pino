@@ -52,18 +52,22 @@ function ProfilePage() {
             </div>
             <div className="name">
               <h4 className="title">
-                Jane Faker <br />
+               Lady Pino Ramirez <br />
               </h4>
-              <h6 className="description">Music Producer</h6>
+              <h6 className="description">FrontEnd Developer</h6>
             </div>
           </div>
           <Row>
             <Col className="ml-auto mr-auto text-center" md="6">
               <p>
-                An artist of considerable range, Jane Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.
+              Frontend y Traductora Bilingue con especialidad en writing and reading documents,
+              Me desenvuelvo Gratamente en grupos de trabajo integrándome rápidamente,
+              me motivan los desafíos de aprendizaje continuo desarrollando webs pioneras en diseños y
+               funciones enfocadas en dar soluciones que impacten positivamente la vida de las personas
+                busco un sector donde pueda desenvolverme en el área Frontend.en un ambiente horizontal,
+                 Integrando un equipo de trabajo de desarrollo y diseño de soluciones con un excelente 
+                 entorno laboral para trabajar. siendo fundamental el trato y el entusiasmo por el diseño y
+                  desarrollo web.
               </p>
               <br />
               <Button className="btn-round" color="default" outline>
