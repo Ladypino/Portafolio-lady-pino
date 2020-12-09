@@ -2,8 +2,8 @@
 import React from "react";
 
 import IndexHeader from "../components/IndexHeader.js";
-import ProfilePage from "../views/ProfilePage.js";
-import LandingPage from "../views/LandingPage";
+import ProfilePage from "../components/ProfilePage.js";
+import LandingPage from "../components/LandingPage";
 import Footer from "../components/Footer.js";
 import NavbarPage from "../components/IndexNavbar.js";
 
