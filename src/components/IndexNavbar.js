@@ -1,145 +1,169 @@
+import React, { Component } from "react";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import WorkWhithMe from '../components/WorkWhithMe.jsx';
+import Proyects from  '../components/proyects.jsx'
+import AboutMe from "../components/about.jsx";
+import ContactMe from "../components/contactMe.jsx";
+import IndexHeader from "./IndexHeader.js"
 
-import React from "react";
-// nodejs library that concatenates strings
-import classnames from "classnames";
-// reactstrap components
-import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-} from "reactstrap";
 
-const IndexNavbar = () => {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 
-  const toggleNavbarCollapse = () => {
-    setNavbarCollapse(!navbarCollapse);
-    document.documentElement.classList.toggle("nav-open");
-  };
+class NavbarPage extends Component {
 
-  React.useEffect(() => {
-    const updateNavbarColor = () => {
-      if (
-        document.documentElement.scrollTop > 299 ||
-        document.body.scrollTop > 299
-      ) {
-        setNavbarColor("");
-      } else if (
-        document.documentElement.scrollTop < 300 ||
-        document.body.scrollTop < 300
-      ) {
-        setNavbarColor("navbar-transparent");
-      }
-    };
-
-    window.addEventListener("scroll", updateNavbarColor);
-
-    return function cleanup() {
-      window.removeEventListener("scroll", updateNavbarColor);
-    };
-  });
-  return (
-    <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
-      <Container>
-        <div className="navbar-translate">
-          <NavbarBrand
-            data-placement="bottom"
-            href="/index"
-            target="_blank"
+    constructor(props) {
+      super(props);
+      this.scrollToTop = this.scrollToTop.bind(this);
+    }
+  
+    componentDidMount() {
+  
+      Events.scrollEvent.register('begin', function () {
+        console.log("begin", arguments);
+      });
+  
+      Events.scrollEvent.register('end', function () {
+        console.log("end", arguments);
+      });
+  
+    }
+    scrollToTop() {
+      scroll.scrollToTop();
+    }
+    scrollTo() {
+      scroller.scrollTo('scroll-to-element', {
+        duration: 800,
+        delay: 0,
+        smooth: 'easeInOutQuart'
+      })
+    }
+    scrollToWithContainer() {
+  
+      let goToContainer = new Promise((resolve, reject) => {
+  
+        Events.scrollEvent.register('end', () => {
+          resolve();
+          Events.scrollEvent.remove('end');
+        });
+  
+        scroller.scrollTo('scroll-container', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart'
+        });
+  
+      });
+  
+      goToContainer.then(() =>
+        scroller.scrollTo('scroll-container-second-element', {
+          duration: 800,
+          delay: 0,
+          smooth: 'easeInOutQuart',
+          containerId: 'scroll-container'
+        }));
+    }
+    componentWillUnmount() {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    }
+    render() {
+      return (
+        <div>
+            <nav className="navbar navbar-default navbar-fixed-top">
+              <div className="container-fluid">
+                <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul className="nav navbar-nav">
+                    <li><Link activeClass="active" className="test1" to= "IndexHeader"    spy={true} smooth={true} duration={500} >inicioo </Link></li>
+                    <li><Link activeClass="active" className="tests" to= "AboutMe"    spy={true} smooth={true} duration={500} >Acerca de mi </Link></li>
+                    <li><Link activeClass="active" className="test2" to="Proyects" spy={true} smooth={true} duration={500}>Proyects</Link></li>
+                    <li><Link activeClass="active" className="test3" to="WorkWhithMe" spy={true} smooth={true} duration={500} >Trabajemos juntos</Link></li>
+                    <li><Link activeClass="active" className="test4" to="ContactMe" spy={true} smooth={true} duration={500}>Contactame</Link></li>
+                    <li><Link activeClass="active" className="test5" to="test5" spy={true} smooth={true} duration={500} delay={1000}>Test 5 ( delay )</Link></li>
+                    <li><Link activeClass="active" className="test6" to="anchor" spy={true} smooth={true} duration={500}>Test 6 (anchor)</Link></li>
+                    
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            
+            <Element name="IndexHeader" className="element" >
+            <IndexHeader/>
+          </Element>
+  
+            <Element name="AboutMe" className="element" >
+            <AboutMe/>
+          </Element>
+  {/* 
+            <Element name="Proyects" className="element">
+            <Proyects/>
+          </Element> */}
+  
+            <Element name="WorkWhithMe" className="element">
+            <WorkWhithMe/>
+          </Element>
+  {/* 
+            <Element name="ContactMe" className="element">
+             <ContactMe/>
+          </Element>
+  
+            <Element name="test5" className="element">
+              test 5
+          </Element>
+   */}
+            <div id="anchor" className="element">
+              test 6 (anchor)
+          </div>
+  
+            
           
-          >
-            INICIO WENA CHORO
-          </NavbarBrand>
-          <button
-            aria-expanded={navbarCollapse}
-            className={classnames("navbar-toggler navbar-toggler", {
-              toggled: navbarCollapse,
-            })}
-            onClick={toggleNavbarCollapse}
-          >
-            <span className="navbar-toggler-bar bar1" />
-            <span className="navbar-toggler-bar bar2" />
-            <span className="navbar-toggler-bar bar3" />
-          </button>
+  
+  
+            <a onClick={this.scrollToTop}>Inicio</a>
         </div>
-        <Collapse
-          className="justify-content-end"
-          navbar
-          isOpen={navbarCollapse}
-        >
-          <Nav navbar>
-            <NavItem>
-              <NavLink
-            
-     activeClass="active"
-     to="/About me"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-      data-placement="bottom"
-             
-                target="_Scroll acerca de mi"
-              >
-                <i className="nc-icon nc-circle-10" />
-                <p className="d-lg-none">Acerca de mi</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                to="LandingPage"
-                target="_blank"
-                title="Like us on Facebook"
-                       
-     activeClass="active"
- 
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-     
-              >
-              <i class="nc-icon nc-laptop" />
-              
-                <p className="d-lg-none">Proyectos</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="My Networks"
-                target="_blank"
-                title="Follow us on Instagram"
-              >
-                 <i class="nc-icon nc-zoom-split" />
-                
-            
-                <p className="d-lg-none">Mis redes</p>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="/Contact Me"
-                target="_blank"
-                title="Star on GitHub"
-              >
-                <i class="nc-icon nc-mobile" />
-                <p className="d-lg-none">Contactame</p>
-              </NavLink>
-            </NavItem>
-      
-          </Nav>
-        </Collapse>
-      </Container>
-    </Navbar>
-  );
-}
+      );
+    }
+  };
+  
 
-export default IndexNavbar;
+
+
+
+
+
+
+
+/* 
+    <MDBContainer>
+      <MDBNavbar color="info-color" dark expand="md" style={{ marginTop: "20px" }}>
+        <MDBNavbarBrand>
+          <strong className="white-text">MDBNavbar</strong>
+        </MDBNavbarBrand>
+        <MDBNavbarToggler onClick={this.toggleCollapse("navbarCollapse3")} />
+        <MDBCollapse id="navbarCollapse3" isOpen={this.state.collapseID} navbar>
+          <MDBNavbarNav right>
+            <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                <MDBIcon icon="envelope" className="mr-1" />Contact</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink className="waves-effect waves-light" to="#!">
+                <MDBIcon icon="cog" className="mr-1" />Settings</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBDropdown>
+                <MDBDropdownToggle nav caret>
+                  <MDBIcon icon="user" className="mr-1" />Profile
+                </MDBDropdownToggle>
+                <MDBDropdownMenu className="dropdown-default" right>
+                  <MDBDropdownItem href="#!">My account</MDBDropdownItem>
+                  <MDBDropdownItem href="#!">Log out</MDBDropdownItem>
+                </MDBDropdownMenu>
+              </MDBDropdown>
+            </MDBNavItem>
+          </MDBNavbarNav>
+        </MDBCollapse>
+      </MDBNavbar>
+   
+    </MDBContainer> */
+ 
+
+export default NavbarPage;

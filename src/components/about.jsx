@@ -1,5 +1,4 @@
 
-
 import React from "react";
 
 import {
@@ -17,10 +16,10 @@ import {
   Col,
 } from "reactstrap";
 
-import ProfilePageHeader from "../components/ProfilePageHeader.js";
 
 
-function ProfilePage() {
+
+function AboutMe() {
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = (tab) => {
@@ -180,4 +179,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default AboutMe;
