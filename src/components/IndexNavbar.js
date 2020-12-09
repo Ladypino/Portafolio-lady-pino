@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
-import WorkWhithMe from '../components/WorkWhithMe.jsx';
-import Proyects from  '../components/proyects.jsx'
-import AboutMe from "../components/about.jsx";
-import ContactMe from "../components/contactMe.jsx";
+import WorkWhithMe from '../components/WorkWhithMe.js';
+import Proyects from  '../components/proyects.js'
+import AboutMe from "../components/about.js";
+import ContactMe from "../components/contactMe.js";
 import IndexHeader from "./IndexHeader.js"
 
 
@@ -72,46 +72,47 @@ class NavbarPage extends Component {
               <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul className="nav navbar-nav">
-                    <li><Link activeClass="active" className="test1" to= "IndexHeader"    spy={true} smooth={true} duration={500} >inicioo </Link></li>
-                    <li><Link activeClass="active" className="tests" to= "AboutMe"    spy={true} smooth={true} duration={500} >Acerca de mi </Link></li>
-                    <li><Link activeClass="active" className="test2" to="Proyects" spy={true} smooth={true} duration={500}>Proyects</Link></li>
+                  <li><Link activeClass="active" className="test0" to= "IndexHeader"    spy={true} smooth={true} duration={500} >Inicio</Link></li>
+                    <li><Link activeClass="active" className="test1" to= "AboutMe"    spy={true} smooth={true} duration={500} >Acerca de mi </Link></li>
+                     <li><Link activeClass="active" className="test2" to="Proyects" spy={true} smooth={true} duration={500}>Proyects</Link></li> 
                     <li><Link activeClass="active" className="test3" to="WorkWhithMe" spy={true} smooth={true} duration={500} >Trabajemos juntos</Link></li>
-                    <li><Link activeClass="active" className="test4" to="ContactMe" spy={true} smooth={true} duration={500}>Contactame</Link></li>
-                    <li><Link activeClass="active" className="test5" to="test5" spy={true} smooth={true} duration={500} delay={1000}>Test 5 ( delay )</Link></li>
-                    <li><Link activeClass="active" className="test6" to="anchor" spy={true} smooth={true} duration={500}>Test 6 (anchor)</Link></li>
+                     <li><Link activeClass="active" className="test4" to="ContactMe" spy={true} smooth={true} duration={500}>Contactame</Link></li>
+                 {/*    <li><Link activeClass="active" className="test5" to="test5" spy={true} smooth={true} duration={500} delay={1000}>Test 5 ( delay )</Link></li>
+                    <li><Link activeClass="active" className="test6" to="anchor" spy={true} smooth={true} duration={500}>Test 6 (anchor)</Link></li>  */}
                     
                   </ul>
                 </div>
               </div>
             </nav>
             
+          
             <Element name="IndexHeader" className="element" >
             <IndexHeader/>
           </Element>
-  
+ 
             <Element name="AboutMe" className="element" >
             <AboutMe/>
           </Element>
-  {/* 
+ 
             <Element name="Proyects" className="element">
             <Proyects/>
-          </Element> */}
+          </Element> 
   
             <Element name="WorkWhithMe" className="element">
             <WorkWhithMe/>
           </Element>
-  {/* 
+   
             <Element name="ContactMe" className="element">
              <ContactMe/>
           </Element>
-  
+  {/* 
             <Element name="test5" className="element">
               test 5
           </Element>
-   */}
+   
             <div id="anchor" className="element">
               test 6 (anchor)
-          </div>
+          </div> */}
   
             
           

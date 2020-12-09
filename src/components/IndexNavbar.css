@@ -1,0 +1,20 @@
+.navbar-navbar-default-navbar-fixed-top{
+background-color: rgb(219, 13, 185);
+}
+.container-fluid{
+    background-color: rgb(201, 129, 35);
+}
+.collapse-navbar-collapse{
+    background-color: rgb(46, 22, 102);
+}
+.nav-navbar-nav{
+    background-color: rgb(186, 161, 23);
+}
+
+.active{
+    background-color: rgb(85, 196, 42);
+}
+
+.test0{
+    background-color: rgb(231, 18, 18);
+}
