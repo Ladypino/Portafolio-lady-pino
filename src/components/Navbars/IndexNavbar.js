@@ -75,10 +75,16 @@ const IndexNavbar = () => {
           <Nav navbar>
             <NavItem>
               <NavLink
-                data-placement="bottom"
-                href="/About me"
-                target="_blank"
-                title="Follow us on Twitter"
+            
+     activeClass="active"
+     to="/About me"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={500}
+      data-placement="bottom"
+             
+                target="_Scroll acerca de mi"
               >
                 <i className="nc-icon nc-circle-10" />
                 <p className="d-lg-none">Acerca de mi</p>

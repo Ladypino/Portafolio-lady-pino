@@ -12,8 +12,7 @@ import Index from "views/Index.js";
 
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import RegisterPage from "views/examples/RegisterPage.js";
-// others
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -22,7 +21,7 @@ ReactDOM.render(
       render={(props) => <Index {...props} />} />
 
       <Route
-        path="/About ME"
+        path="/About me"
         render={(props) => <ProfilePage {...props}/>}
       />
       <Route
@@ -33,10 +32,7 @@ ReactDOM.render(
         path="/About me"
         render={(props) => <ProfilePage {...props} />}
       />
-      <Route
-        path="/register-page"
-        render={(props) => <RegisterPage {...props} />}
-      />
+     
       <Redirect to="/index" />
     </Switch>
   </BrowserRouter>,

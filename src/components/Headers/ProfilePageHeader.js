@@ -24,17 +24,7 @@ function ProfilePageHeader() {
 
   return (
     <>
-      <div
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/about.jpg") + ")",
-        }}
-        className="page-header page-header-xs"
-        data-parallax={true}
-        ref={pageHeader}
-      >
-        <div className="filter" />
-      </div>
+   
     </>
   );
 }
