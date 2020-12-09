@@ -8,28 +8,27 @@ import LandingPage from "views/examples/LandingPage";
 
 import DemoFooter from "components/Footers/DemoFooter.js";
 
+import React from 'react';
 
-const Index= ()=> {
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("index");
-    return function cleanup() {
-      document.body.classList.remove("index");
-    };
-  });
-  return (
-    <>
-      <IndexNavbar />
+
+const HelloWorld = (props) => {
+    return (
+   
+    
+      <div className="main">
+           <IndexNavbar />
       <IndexHeader />
       <ProfilePage/>
      <LandingPage/>
     
-      <div className="main">
      
         <DemoFooter />
       </div>
-    </>
-  );
-}
 
-export default Index;
+    );
+};
+
+export default HelloWorld;
+
+
+
