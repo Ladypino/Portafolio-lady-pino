@@ -1,14 +1,12 @@
 
 import React from "react";
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-import LandingPage from "views/examples/LandingPage";
+import IndexNavbar from "../components/IndexNavbar.js";
+import IndexHeader from "../components/IndexHeader.js";
+import ProfilePage from "../views/ProfilePage.js";
+import LandingPage from "../views/LandingPage";
+import Footer from "../components/Footer.js";
 
 
-import DemoFooter from "components/Footers/DemoFooter.js";
-
-import React from 'react';
 
 
 const HelloWorld = (props) => {
@@ -22,7 +20,7 @@ const HelloWorld = (props) => {
      <LandingPage/>
     
      
-        <DemoFooter />
+        <Footer />
       </div>
 
     );

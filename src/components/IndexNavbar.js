@@ -93,9 +93,17 @@ const IndexNavbar = () => {
             <NavItem>
               <NavLink
                 data-placement="bottom"
-                href="Proyects"
+                to="LandingPage"
                 target="_blank"
                 title="Like us on Facebook"
+                       
+     activeClass="active"
+ 
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={500}
+     
               >
               <i class="nc-icon nc-laptop" />
               

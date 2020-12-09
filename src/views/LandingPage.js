@@ -19,9 +19,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+
+import LandingPageHeader from "../components/LandingPageHeader.js";
+
 
 const LandingPage =() => {
   document.documentElement.classList.remove("nav-open");
@@ -33,7 +33,7 @@ const LandingPage =() => {
   });
   return (
     <>
-      <ExamplesNavbar />
+   
       <LandingPageHeader />
       <div className="main">
         <div className="section text-center">
@@ -143,7 +143,7 @@ const LandingPage =() => {
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/clem-onojeghuo-3.jpg")}
+                        // src={require("assets/img/faces/clem-onojeghuo-3.jpg")}
                       />
                     </a>
                   </div>
@@ -194,7 +194,7 @@ const LandingPage =() => {
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/joe-gardner-2.jpg")}
+                        // src={require("assets/img/faces/joe-gardner-2.jpg")}
                       />
                     </a>
                   </div>
@@ -246,7 +246,7 @@ const LandingPage =() => {
                     <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img
                         alt="..."
-                        src={require("assets/img/faces/erik-lucatero-2.jpg")}
+                        // src={require("assets/img/faces/erik-lucatero-2.jpg")}
                       />
                     </a>
                   </div>
@@ -344,7 +344,7 @@ const LandingPage =() => {
           </Container>
         </div>
       </div>
-      <DemoFooter />
+     
     </>
   );
 }

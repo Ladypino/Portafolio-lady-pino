@@ -26,10 +26,10 @@ function LandingPageHeader() {
   return (
     <>
       <div
-        style={{
-          backgroundImage:
-            "url(" + require("assets/img/daniel-olahh.jpg") + ")",
-        }}
+        //style={{
+         // backgroundImage:
+          //   "url(" + require("assets/img/daniel-olahh.jpg") + ")",
+       // }}
         className="page-header"
         data-parallax={true}
         ref={pageHeader}
