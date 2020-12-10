@@ -1,16 +1,14 @@
 
 import React from "react";
-
-
- */
+import "./assets/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HelloWorld from './views/HelloWorld'
 
 
 
 
-function App() {
-
+const App= () =>{
+ 
 
   return (
     <Router>
@@ -19,19 +17,9 @@ function App() {
          
         
             <HelloWorld/>
-        {/* 
-        </Route>
-        <Route path="/AboutMe" exact >
-       <ProfilePage/>
         
         </Route>
-     
-        <Route path="/WorkWhithMe" exact >
-          <LandingPage/>
-        </Route>
-        <Route path="Footer" exact>
-          <Footer /> */}
-        </Route>
+      
       </Switch>
     </Router >
   );

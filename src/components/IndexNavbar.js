@@ -71,10 +71,10 @@ class NavbarPage extends Component {
             <nav className="navbar navbar-default navbar-fixed-top"  color="info-color" dark expand="md" style={{ marginTop: "20px"}}>
               <div className="container-fluid">
                 <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul className="nav navbar-nav">
-                  <li><Link activeClass="active" className="test0" to= "IndexHeader"    spy={true} smooth={true} duration={500} > <p className='t1'>Inicio</p></Link></li>
+                  <ul className="nav navbar-nav"  style={{ marginTop: "20px", color:"purple", width:'6em', height:'21em'}}>
+                  <li><Link activeClass="active" className="test0" to= "IndexHeader"    spy={true} smooth={true} duration={500} > <h5 className='t1'>Inicio</h5></Link></li>
                     <li><Link activeClass="active" className="test1" to= "AboutMe"    spy={true} smooth={true} duration={500} >Acerca de mi </Link></li>
-                     <li><Link activeClass="active" className="test2" to="Proyects" spy={true} smooth={true} duration={500}><p className='t2'>Inicio</p></Link></li> 
+                     <li><Link activeClass="active" className="test2" to="Proyects" spy={true} smooth={true} duration={500}><h5 className='t2'>Inicio</h5></Link></li> 
                     <li><Link activeClass="active" className="test3" to="WorkWhithMe" spy={true} smooth={true} duration={500} >Trabajemos juntos</Link></li>
                      <li><Link activeClass="active" className="test4" to="ContactMe" spy={true} smooth={true} duration={500}>Contactame</Link></li>
                  {/*    <li><Link activeClass="active" className="test5" to="test5" spy={true} smooth={true} duration={500} delay={1000}>Test 5 ( delay )</Link></li>

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import { Container } from "reactstrap";
@@ -12,7 +11,7 @@ function IndexHeader() {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("../assets/img/ladyheader.jpg") + ")",position:"inherit"
+            "url(" + require("../assets/img/antoine-barres.jpg") + ")",
         }}
       >
         <div className="filter" />

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useState, useEffect }from "react";
 
 import {
   Button,
@@ -15,11 +15,25 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import Carousel from './Carousel.js'
 
+import axios from 'axios';
 
+const SPLASHBASE_URL = 'http://www.splashbase.co/api/v1/images/latest';
 
+const AboutMe = (props) => {
 
-function AboutMe() {
+  const [imgList, setImgList] = useState([]);
+
+  useEffect(() => {
+    axios.get(SPLASHBASE_URL)
+    .then((resp) => {
+      setImgList(resp.data.images);
+    }).catch((err) => {
+      console.log('Unable to Fetch Image from splashbase', err);
+    });
+  }, []);
+
   const [activeTab, setActiveTab] = React.useState("1");
 
   const toggle = (tab) => {
@@ -174,9 +188,17 @@ function AboutMe() {
           </TabContent>
         </Container>
       </div>
-    
+      <div>
+      <h1>Carousel</h1>
+      {imgList.length === 0 && <div>Loading...</div>}
+      {imgList.length > 0 &&
+        <Carousel imgList={imgList} img_width={300} img_height={300}
+        visibleImages={3} duration={750}/>
+      }
+    </div>
     </>
   );
+  
 }
 
 export default AboutMe;
