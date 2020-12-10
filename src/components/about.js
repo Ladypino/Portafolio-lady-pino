@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect }from "react";
-
+import './Carousel.css';
 import {
   Button,
   Label,
@@ -59,7 +59,7 @@ const AboutMe = (props) => {
               <img
                 alt="..."
                 className="img-circle img-no-padding img-responsive"
-                src={require("../assets/img/lady1.jpg")}
+                src={require("../assets/img/carrousel/profileLady.jpg")}
               />
             </div>
             <div className="name">
@@ -98,17 +98,20 @@ const AboutMe = (props) => {
                       toggle("1");
                     }}
                   >
-                    Follows
+                    Habilidades
                   </NavLink>
                 </NavItem>
+                
+                
                 <NavItem>
+                 
                   <NavLink
                     className={activeTab === "2" ? "active" : ""}
                     onClick={() => {
                       toggle("2");
                     }}
                   >
-                    Following
+                  Pasatiempos
                   </NavLink>
                 </NavItem>
               </Nav>
@@ -118,87 +121,37 @@ const AboutMe = (props) => {
           <TabContent className="following" activeTab={activeTab}>
             <TabPane tabId="1" id="follows">
               <Row>
-                <Col className="ml-auto mr-auto" md="6">
-                  <ul className="list-unstyled follows">
-                    <li>
-                      <Row>
-                        <Col className="ml-auto mr-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            // src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                          />
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="7" md="4" xs="4">
-                          <h6>
-                            Flume <br />
-                            <small>Musical Producer</small>
-                          </h6>
-                        </Col>
-                        <Col className="ml-auto mr-auto" lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input
-                                defaultChecked
-                                defaultValue=""
-                                type="checkbox"
-                              />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                    <hr />
-                    <li>
-                      <Row>
-                        <Col className="mx-auto" lg="2" md="4" xs="4">
-                          <img
-                            alt="..."
-                            className="img-circle img-no-padding img-responsive"
-                            // src={require("assets/img/faces/ayo-ogunseinde-2.jpg")}
-                          />
-                        </Col>
-                        <Col lg="7" md="4" xs="4">
-                          <h6>
-                            Banks <br />
-                            <small>Singer</small>
-                          </h6>
-                        </Col>
-                        <Col lg="3" md="4" xs="4">
-                          <FormGroup check>
-                            <Label check>
-                              <Input defaultValue="" type="checkbox" />
-                              <span className="form-check-sign" />
-                            </Label>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </li>
-                  </ul>
+                <Col className="ml-auto mr-auto" md="17">
+                <div>
+ 
+      {imgList.length === 0 && <div>Loading...</div>}
+      {imgList.length > 0 &&
+        <Carousel imgList={imgList} img_width={400} img_height={300}
+        visibleImages={3} duration={750}/>
+      }
+    </div>
                 </Col>
               </Row>
             </TabPane>
             <TabPane className="text-center" tabId="2" id="following">
-              <h3 className="text-muted">Not following anyone yet :(</h3>
-              <Button className="btn-round" color="warning">
-                Find artists
-              </Button>
+                               <div>
+      
+      {imgList.length === 0 && <div>Loading...</div>}
+      {imgList.length > 0 &&
+        <Carousel imgList={imgList} img_width={400} img_height={300}
+        visibleImages={3} duration={750}/>
+      }
+    </div>
+              
             </TabPane>
           </TabContent>
         </Container>
       </div>
-      <div>
-      <h1>Carousel</h1>
-      {imgList.length === 0 && <div>Loading...</div>}
-      {imgList.length > 0 &&
-        <Carousel imgList={imgList} img_width={300} img_height={300}
-        visibleImages={3} duration={750}/>
-      }
-    </div>
+    
     </>
   );
-  
 }
+
+
 
 export default AboutMe;

@@ -20,3 +20,6 @@
   .dn {
     display: none;
   }
+  .following img {
+    max-width: 400px;
+}
