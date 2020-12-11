@@ -26,10 +26,10 @@ function WorkWhithMe() {
   return (
     <>
       <div
-        //style={{
-         // backgroundImage:
-          //   "url(" + require("assets/img/daniel-olahh.jpg") + ")",
-       // }}
+       style={{
+         backgroundImage:
+           "url(" + require("../assets/img/ladyheader2.jpg") + ")",
+      }}
         className="page-header"
         data-parallax={true}
         ref={pageHeader}
@@ -37,8 +37,8 @@ function WorkWhithMe() {
         <div className="filter" />
         <Container>
           <div className="motto text-center">
-            <h1>Example page</h1>
-            <h3>Start designing your landing page here.</h3>
+            <h1>Mi Informacion</h1>
+            <h3>Descargar Pdf</h3>
             <br />
             <Button
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -47,12 +47,10 @@ function WorkWhithMe() {
               target="_blank"
               outline
             >
-              <i className="fa fa-play" />
-              youtube
+              <i className="fa fa-download" />
+              Descargar CV
             </Button>
-            <Button className="btn-round" color="neutral" type="button" outline>
-             podria descargar cv
-            </Button>
+          
           </div>
         </Container>
       </div>

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect }from "react";
 import './Carousel.css';
-import carrousel from '../assets/img/carrousel'
+import './about.css';
 import {
   Button,
   Label,
@@ -20,13 +20,14 @@ import Carousel from './Carousel.js'
 
 import axios from 'axios';
 
+const SPLASHBASE_URL = 'http://www.splashbase.co/api/v1/images/latest';
 
 const AboutMe = (props) => {
 
   const [imgList, setImgList] = useState([]);
 
   useEffect(() => {
-    axios.get('carrousel')
+    axios.get(SPLASHBASE_URL)
     .then((resp) => {
       setImgList(resp.data.images);
     }).catch((err) => {
@@ -52,7 +53,7 @@ const AboutMe = (props) => {
   return (
     <>
 
-      <div className="section profile-content">
+      <div className="section profile-content1">
         <Container>
           <div className="owner">
             <div className="avatar">
@@ -63,15 +64,15 @@ const AboutMe = (props) => {
               />
             </div>
             <div className="name">
-              <h4 className="title">
+              <h2 className="title">
                Lady Pino Ramirez <br />
-              </h4>
-              <h6 className="description">FrontEnd Developer</h6>
+              </h2>
+              <h4 className="description">FrontEnd Developer</h4>
             </div>
           </div>
           <Row>
-            <Col className="ml-auto mr-auto text-center" md="6">
-              <p>
+            <Col className="ml-auto mr-auto text-center" md="10">
+              <p className="descriptionAbout">
               Frontend y Traductora Bilingue con especialidad en writing and reading documents,
               Me desenvuelvo Gratamente en grupos de trabajo integrándome rápidamente,
               me motivan los desafíos de aprendizaje continuo desarrollando webs pioneras en diseños y
@@ -83,7 +84,7 @@ const AboutMe = (props) => {
               </p>
               <br />
               <h2>
-                 Conoce mas
+           CONOCE MAS
               </h2>
             </Col>
           </Row>
@@ -91,16 +92,7 @@ const AboutMe = (props) => {
           <div className="nav-tabs-navigation">
             <div className="nav-tabs-wrapper">
               <Nav role="tablist" tabs>
-                <NavItem>
-                  <NavLink
-                    className={activeTab === "1" ? "active" : ""}
-                    onClick={() => {
-                      toggle("1");
-                    }}
-                  >
-                    Habilidades
-                  </NavLink>
-                </NavItem>
+            
                 
                 
                 <NavItem>
@@ -111,7 +103,7 @@ const AboutMe = (props) => {
                       toggle("2");
                     }}
                   >
-                  Pasatiempos
+                 Pasatiempos y Familia
                   </NavLink>
                 </NavItem>
               </Nav>

@@ -1,54 +1,52 @@
 import React from "react";
-
+import './Footer.css'
 // reactstrap components
-import { Row, Container, NavItem, NavLink, } from "reactstrap";
+import { Row, Container, Button } from "reactstrap";
 
 function Footer() {
   return (
     <footer className="footer footer-black footer-white">
       <Container>
         <Row>
-        <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://https://github.com/Ladypino"
-                target="_blank"
-                title="Redireccionar a GitHub Lady Pino"
-                rel="noopener noreferrer"
-              >
-                <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem>
+          <nav className="footer-nav">
+          <div className="social-line text-center">
+                  <Button
+                    className="btn-neutral btn-just-icon mr-1"
+                    color="linkedin"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-linkedin" />
+                  </Button>
+                  <Button
+                    className="btn-neutral btn-just-icon mr-1"
+                    color="google"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-code" />
+                  </Button>
+                  <Button
+                    className="btn-neutral btn-just-icon mr-1"
+                   
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-whatsapp" />
+                  </Button>
 
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://https://github.com/Ladypino"
-                target="_blank"
-                title="Redireccionar a GitHub Lady Pino"
-                rel="noopener noreferrer"
-              >
-                <i className="nc-icon nc-briefcase-24" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem>
 
-            <NavItem>
-              <NavLink
-                data-placement="bottom"
-                href="https://https://github.com/Ladypino"
-                target="_blank"
-                title="Redireccionar a GitHub Lady Pino"
-                rel="noopener noreferrer"
-              >
-                <i className="nc-icon nc-email-85" />
-                <p className="d-lg-none">GitHub</p>
-              </NavLink>
-            </NavItem>
-
-            
-          
+                  <Button
+                    className="btn-neutral btn-just-icon"
+                    color="purple"
+                    href="#pablo"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-github" />
+                  </Button>
+                </div>
+               
+          </nav>
           <div className="credits ml-auto">
             <span className="copyright">
               © {new Date().getFullYear()}, made with{" "}
