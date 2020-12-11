@@ -10,7 +10,7 @@ const IndexHeader = () => {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("../assets/img/antoine-barres.jpg") + ")",
+            "url(" + require("../assets/img/lady4.jpg") + ")",
         }}
       >
         <div className="filter" />
