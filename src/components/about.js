@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect }from "react";
 import './Carousel.css';
+import carrousel from '../assets/img/carrousel'
 import {
   Button,
   Label,
@@ -19,14 +20,13 @@ import Carousel from './Carousel.js'
 
 import axios from 'axios';
 
-const SPLASHBASE_URL = 'http://www.splashbase.co/api/v1/images/latest';
 
 const AboutMe = (props) => {
 
   const [imgList, setImgList] = useState([]);
 
   useEffect(() => {
-    axios.get(SPLASHBASE_URL)
+    axios.get('carrousel')
     .then((resp) => {
       setImgList(resp.data.images);
     }).catch((err) => {
@@ -82,9 +82,9 @@ const AboutMe = (props) => {
                   desarrollo web.
               </p>
               <br />
-              <Button className="btn-round" color="default" outline>
-                <i className="fa fa-cog" /> Settings
-              </Button>
+              <h2>
+                 Conoce mas
+              </h2>
             </Col>
           </Row>
           <br />

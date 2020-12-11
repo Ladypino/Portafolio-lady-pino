@@ -1,5 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {Fragment} from 'react-dom'
+import React, {useState, useEffect, useRef, Fragment} from 'react';
+
 import './Carousel.css';
 import  Test from '../assets/img/carrousel/l1.jpg'
 import  Test1 from '../assets/img/carrousel/l2.jpg'
@@ -16,7 +16,6 @@ import  Test11 from '../assets/img/carrousel/l12.jpg'
 import  Test12 from '../assets/img/carrousel/l13.jpg'
 import  Test13 from '../assets/img/carrousel/l14.jpg'
 import  Test14 from '../assets/img/carrousel/l15.jpg'
-import  Test15 from '../assets/img/carrousel/l16.jpg'
 
 
 
@@ -28,7 +27,7 @@ const VISIBLEIMAGES = 3;
 const DURATION = 750;
 
 const Carousel = (props) => {
-  const {imgList = [ {Test,Test1,Test2}], img_width = IMG_WIDTH, img_height = IMG_HEIGHT, visibleImages = VISIBLEIMAGES, duration = DURATION, autoNext = false, timeForNext = 3000} = props;
+  const {imgList = [], img_width = IMG_WIDTH, img_height = IMG_HEIGHT, visibleImages = VISIBLEIMAGES, duration = DURATION, autoNext = false, timeForNext = 3000} = props;
   /* Hooks Declarations Start*/
   const [currFirstImg, setCurrFirstImg] = useState(0);  
   const [actualFirst, setActualFirst] = useState('');   
@@ -168,55 +167,54 @@ const Carousel = (props) => {
           const dn = visibleItemsProps.order.indexOf(index) === -1; // To not to show images that are out of visibility scope
           const styles = visibleItemsProps[index] ? visibleItemsProps[index].styles: {};
           return (
+
             <Fragment>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test} alt={'img_' + id } width={img_width} height={img_height}/>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+              <img src={Test} alt={'l1' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test1} alt={'img_' + id } width={img_width} height={img_height}/>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+              <img src={Test1} alt={'l2' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test2} alt={'img_' + id } width={img_width} height={img_height}/>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+              <img src={Test2} alt={'l3' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test3} alt={'img_' + id } width={img_width} height={img_height}/>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+              <img src={Test3} alt={'l4' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test4} alt={'img_' + id } width={img_width} height={img_height}/>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+              <img src={Test4} alt={'img_4' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test5} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test6} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:  'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test7} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test8} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test9} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test10} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test11} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test12} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test13} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
+            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position:'relative', transition: `fast1 ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
               <img src={Test14} alt={'img_' + id } width={img_width} height={img_height}/>
             </li>
-            <li key={id} className={'imgWrap ' + (dn ? 'dn': '')} style={{...styles, position: 'absolute', transition: `all ${durationRef.current}ms linear `}} onClick={(e) => { changeCenter({e, index, large_url})} }>
-              <img src={Test15} alt={'img_' + id } width={img_width} height={img_height}/>
-            </li>
+           
             </Fragment>
           )
         })

@@ -3,8 +3,7 @@ import React from "react";
 import { Container } from "reactstrap";
 
 
-
-function IndexHeader() {
+const IndexHeader = () => {
   return (
     <>
       <div

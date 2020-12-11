@@ -34,101 +34,100 @@ const Proyects =() => {
     <>
    
 
-      <div className="main">
-        <div className="section text-center">
+      <div className="section section-dark text-center">
+        <div className="section text-center"  color="black">
           <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
-                <h2 className="title">Let's talk product</h2>
+                <h2 className="title">Mis Trabajos</h2>
                 <h5 className="description">
-                  This is the paragraph where you can write more details about
-                  your product. Keep you user engaged by providing meaningful
-                  information. Remember that by this time, the user is curious,
-                  otherwise he wouldn't scroll to get here. Add a button if you
-                  want the user to see more.
+                 Encontraras un extracto de mi trabajo, el cual fue 
+                 realizado con mucho cariño y esfuerzo para lograr siempre un impacto positivo
+                  en la vida de mi usuario,empatizando  con sus dolores,buscando la mejor solucion para ellos,
+                   diseñando y desarrollando una aplicacion personalizada para cada uno, creando una experiencia unica,
+                   gratificante y por sobre todo lograr un resultado deseable y preminente.
                 </h5>
                 <br />
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={(e) => e.preventDefault()}
-                >
-                  See Details
-                </Button>
+                <h2 className="title">
+                Conoce mas
+                </h2>
               </Col>
             </Row>
             <br />
             <br />
             <Row>
-              <Col md="3">
+              <Col md="6">
                 <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-album-2" />
-                  </div>
+                <div className="avatar">
+                
+              <img
+               
+                className="img-thumbnail img-no-padding img-responsive "
+                src={require("../assets/img/mockups/artSpace.jpeg")}
+              />
+            </div>
+               
+                 
                   <div className="description">
-                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <h4 className="info-title">Art Space</h4>
                     <p className="description">
-                      Spend your time generating new ideas. You don't have to
-                      think of implementing.
+                    Art Space Red Social que viene a responder las necesidades de interacción de las personas,tendrás acceso a la mejor comunidad de artes manuales de Chile! Podrás crear una cuenta de acceso loguearte con ella; crear, editar, borrar y "likear" publicaciones y charlar con amigos
                     </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
+                    <Button className="btn-round" color="purple" href="https://fabianesantos.github.io/SCL014-social-network/src/index.html#/inicio-sesion">
+                      Prototipo
+                    </Button><Button className="btn-round" color="purple" href="https://github.com/Ladypino/SCL014-social-network">
+                     Repositorio
                     </Button>
+
                   </div>
                 </div>
               </Col>
-              <Col md="3">
+              <Col md="6">
                 <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-bulb-63" />
-                  </div>
+                <div className="avatar">
+                
+                
+                <img className="img-thumbnail img-no-padding img-responsive "
+                  src={require("../assets/img/mockups/burguerQueen.png")}
+                />
+              </div>
                   <div className="description">
-                    <h4 className="info-title">New Ideas</h4>
+                    <h4 className="info-title">Burguer Queen</h4>
                     <p>
-                      Larger, yet dramatically thinner. More powerful, but
-                      remarkably power efficient.
+                    Burger Queen es un software Gastronómico ,con una interfaz para  tomar pedidos usando una tablet (ver responsive IPad) ,dejando atrás las comandas escritas ,perdida o información incomprensible optimizando la organización del trabajo  automatizando los procesos del pedido.
                     </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
+                    <Button className="btn-round" color="purple" href="https://burger-queen-5875a.web.app/">
+                    Prototipo
+                    </Button>
+                    <Button className="btn-round" color="purple" href="https://github.com/Ladypino/burger-queen">
+                  Repositorio
                     </Button>
                   </div>
                 </div>
               </Col>
-              <Col md="3">
+              <Col md="8">
                 <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-chart-bar-32" />
-                  </div>
+                <img
+                 
+                 className="img-thumbnail img-no-padding img-responsive "
+                 src={require("../assets/img/mockups/cpT.png")}
+               />
                   <div className="description">
-                    <h4 className="info-title">Statistics</h4>
+                    <h4 className="info-title">Comida Para todos</h4>
                     <p>
-                      Choose from a veriety of many colors resembling sugar
-                      paper pastels.
+                    "Comida para todos”  Fundación que nace de organizaciones sociales,que busca salvaguardar la Seguridad Alimentaria, en Chile y el mundo,se resuelve problemática de los diferentes tipos de donación aplicando, firebase , hooks se estructura pagina completa en diseño y funcionalidad
                     </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
+                    <Button className="btn-round" color="purple" href="https://comida-para-todos-28f10.web.app/">
+                      Prototipo
+                    </Button> 
+                   
+                    <Button className="btn-round" color="purple" href="https://github.com/Ladypino/comida-para-todos">
+                      Repositorio
                     </Button>
                   </div>
                 </div>
               </Col>
-              <Col md="3">
-                <div className="info">
-                  <div className="icon icon-info">
-                    <i className="nc-icon nc-sun-fog-29" />
-                  </div>
-                  <div className="description">
-                    <h4 className="info-title">Delightful design</h4>
-                    <p>
-                      Find unique and handmade delightful designs related items
-                      directly from our sellers.
-                    </p>
-                    <Button className="btn-link" color="info" href="#pablo">
-                      See more
-                    </Button>
-                  </div>
-                </div>
-              </Col>
+        
             </Row>
           </Container>
         </div>
