@@ -1,0 +1,10 @@
+
+.moving-clouds {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 250.625em;
+    height: 70.75em;
+    animation: cloudLoop 80s linear infinite;
+}

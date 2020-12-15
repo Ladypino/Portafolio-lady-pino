@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container } from "reactstrap";
-
+import './IndexHeader.css'
 
 const IndexHeader = () => {
   return (

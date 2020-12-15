@@ -74,7 +74,7 @@ const Proyects =() => {
                  <img
                
                className="img-thumbnail img-no-padding img-responsive "
-               src={require("../assets/img/mockups/as2.png")}
+               src={require("../assets/img/mockups/as3.png")}
              />
             </div>
                
@@ -102,6 +102,16 @@ const Proyects =() => {
                 <img className="img-thumbnail img-no-padding img-responsive "
                   src={require("../assets/img/mockups/burguerQueen.png")}
                 />
+                     <img
+               
+               className="img-thumbnail img-no-padding img-responsive "
+               src={require("../assets/img/mockups/bq2.png")}
+             />
+                  <img
+               
+               className="img-thumbnail img-no-padding img-responsive "
+               src={require("../assets/img/mockups/bq3.png")}
+             />
               </div>
                   <div >
                     <h4 className="info-title">Burguer Queen</h4>
@@ -124,6 +134,12 @@ const Proyects =() => {
                  className="img-thumbnail img-no-padding img-responsive "
                  src={require("../assets/img/mockups/cpT.png")}
                />
+                    <img
+               
+               className="img-thumbnail img-no-padding img-responsive "
+               src={require("../assets/img/mockups/cpt2.png")}
+             />
+            
                   <div >
                     <h4 className="info-title">Comida Para todos</h4>
                     <p className="description">
