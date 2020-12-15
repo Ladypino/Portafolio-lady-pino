@@ -1,6 +1,8 @@
 import React from "react";
 // nodejs library that concatenates strings
 import classnames from "classnames";
+import  './Footer.js'
+import  './IndexNavbar.css'
 // reactstrap components
 import {
   Collapse,
@@ -46,15 +48,15 @@ function NavbarPage() {
     <Navbar className={classnames("fixed-top", navbarColor)} expand="lg">
       <Container>
         <div className="navbar-translate">
-          <NavbarBrand
+        {/*    <NavbarBrand
             data-placement="bottom"
-            href="./IndexHeader.js"
+            href="Footer"
         
            
           
           > <i className="fa fa-home" />
-            INICIO
-          </NavbarBrand>
+           
+          </NavbarBrand>  */}
           <button
             aria-expanded={navbarCollapse}
             className={classnames("navbar-toggler navbar-toggler", {

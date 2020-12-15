@@ -88,7 +88,7 @@ function Carousel2() {
                         onExited={onExited}
                         key={item.src}
                       >
-                        <img src={item.src} alt={item.altText} img_width={400} img_height={300} />
+                        <img src={item.src} alt={item.altText}/>
                         <CarouselCaption
                           captionText={item.caption}
                           captionHeader=""

@@ -12,24 +12,24 @@ function Footer() {
           <div className="social-line text-center">
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
-                    color="linkedin"
-                    href="#pablo"
+                  
+                    href="https://www.linkedin.com/in/ladypino"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-linkedin" />
                   </Button>
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
-                    color="google"
-                    href="#pablo"
+                
+                    href="https://app.talento.laboratoria.la/profile/rnCtPn7MCFUKztbdTvZjLAryciA3"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-code" />
                   </Button>
                   <Button
                     className="btn-neutral btn-just-icon mr-1"
-                   
-                    href="#pablo"
+               
+                    href="https://api.whatsapp.com/send?phone=56932700688"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-whatsapp" />
@@ -38,8 +38,8 @@ function Footer() {
 
                   <Button
                     className="btn-neutral btn-just-icon"
-                    color="purple"
-                    href="#pablo"
+              
+                    href="https://github.com/Ladypino"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-github" />

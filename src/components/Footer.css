@@ -1,18 +1,10 @@
-.fa-github2:before {
-  font-size: 1.3em;
-    color: black;
-}
 
-.fa-code2:before {
-    font-size: 1.3em;
-    color:rgb(233, 233, 37);
-}
-.fa-whatsapp2:before {
-    font-size: 1.3em;
-    color: rgb(76, 250, 76);
-}
 
-.fa-linkedin2:before {
-    font-size: 1.3em;
-  
+
+@media (max-width: 767px){
+    .footer {
+        background-color: #fff;
+        line-height: 36px;
+        margin-top: 51em;
+    }
 }

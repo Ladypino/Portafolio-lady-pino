@@ -1,39 +1,13 @@
 
-import React, { useState, useEffect }from "react";
-import './Carousel.css';
+import React from "react";
 import './about.css';
-import {
-  Button,
-  Label,
-  FormGroup,
-  Input,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  Container,
-  Row,
-  Col,
-} from "reactstrap";
-import Carousel from './Carousel.js'
+import {NavItem,NavLink,Nav,TabContent,TabPane,Container,Row,Col,} from "reactstrap";
+import GalleryPhotos from './gallery.js'
 
-import axios from 'axios';
 
-const SPLASHBASE_URL = 'http://www.splashbase.co/api/v1/images/latest';
+
 
 const AboutMe = (props) => {
-
-  const [imgList, setImgList] = useState([]);
-
-  useEffect(() => {
-    axios.get(SPLASHBASE_URL)
-    .then((resp) => {
-      setImgList(resp.data.images);
-    }).catch((err) => {
-      console.log('Unable to Fetch Image from splashbase', err);
-    });
-  }, []);
 
   const [activeTab, setActiveTab] = React.useState("1");
 
@@ -110,29 +84,22 @@ const AboutMe = (props) => {
             </div>
           </div>
           {/* Tab panes */}
-          <TabContent className="following" activeTab={activeTab}>
+          <TabContent activeTab={activeTab}>
             <TabPane tabId="1" id="follows">
-              <Row>
-                <Col className="ml-auto mr-auto" md="17">
+            
+          
                 <div>
  
-      {imgList.length === 0 && <div>Loading...</div>}
-      {imgList.length > 0 &&
-        <Carousel imgList={imgList} img_width={400} img_height={300}
-        visibleImages={3} duration={750}/>
-      }
+    
+        <GalleryPhotos/>
+      
     </div>
-                </Col>
-              </Row>
+               
+             
             </TabPane>
             <TabPane className="text-center" tabId="2" id="following">
                                <div>
-      
-      {imgList.length === 0 && <div>Loading...</div>}
-      {imgList.length > 0 &&
-        <Carousel imgList={imgList} img_width={400} img_height={300}
-        visibleImages={3} duration={750}/>
-      }
+    
     </div>
               
             </TabPane>

@@ -10,7 +10,7 @@ const IndexHeader = () => {
         className="page-header section-dark"
         style={{
           backgroundImage:
-            "url(" + require("../assets/img/lady4.jpg") + ")",
+            "url(" + require("../assets/img/lady3.jpg") + ")",
         }}
       >
         <div className="filter" />
@@ -41,12 +41,7 @@ const IndexHeader = () => {
         />
         <h6 className="category category-absolute">
           Designed and coded by Lady Pino
-          <a
-            href="https://www.creative-tim.com?ref=pkr-index-page"
-            target="_blank"
-          >
-          
-          </a>
+       
         </h6>
       </div>
     </>

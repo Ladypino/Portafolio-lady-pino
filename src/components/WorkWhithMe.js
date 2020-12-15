@@ -1,6 +1,6 @@
 
 import React from "react";
-
+import "./WorkWhithMe.css"
 // reactstrap components
 import { Button, Container } from "reactstrap";
 
@@ -38,16 +38,17 @@ function WorkWhithMe() {
         <Container>
           <div className="motto text-center">
             <h1>Mi Informacion</h1>
-            <h3>Descargar Pdf</h3>
+            <h3>Mi CV</h3>
             <br />
             <Button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href= "https://www.canva.com/design/DAEQCbEUxvI/G8DyPpphtG6bELfsmZsFug/view?website#4"
+              
               className="btn-round mr-1"
               color="neutral"
               target="_blank"
               outline
             >
-              <i className="fa fa-download" />
+              <i className="fa fa-doc" />
               Descargar CV
             </Button>
           

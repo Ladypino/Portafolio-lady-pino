@@ -66,6 +66,16 @@ const Proyects =() => {
                 className="img-thumbnail img-no-padding img-responsive "
                 src={require("../assets/img/mockups/artSpace.jpeg")}
               />
+                 <img
+               
+               className="img-thumbnail img-no-padding img-responsive "
+               src={require("../assets/img/mockups/as2.png")}
+             />
+                 <img
+               
+               className="img-thumbnail img-no-padding img-responsive "
+               src={require("../assets/img/mockups/as2.png")}
+             />
             </div>
                
                  
