@@ -58,7 +58,7 @@ const AboutMe = (props) => {
               </p>
               <br />
               <h2>
-           CONOCE MAS
+           Conoce mas
               </h2>
             </Col>
           </Row>

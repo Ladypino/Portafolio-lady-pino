@@ -8,7 +8,7 @@ import  IndexHeader from "../components/IndexHeader.js";
 import  AboutMe from "../components/about.js";
 import Proyects from "../components/proyects.js";
 import WorWhithMe from "../components/WorkWhithMe.js";
-import Test from "../components/test.js";
+
 
 
 
@@ -26,7 +26,7 @@ const HelloWorld = (props) => {
 <IndexHeader/>
 <AboutMe/>
 <Proyects/>
-<Test/>
+
 <WorWhithMe/>
 <Footer />
       </div>
