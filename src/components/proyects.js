@@ -1,15 +1,14 @@
-import React from "react";
+
 
 import Carrousel2 from './carrousel2.js'
+ import './proyects.css'
+import React, { useState } from 'react';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 
 
 // reactstrap components
 import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
+
   Form,
   Input,
   InputGroupAddon,
@@ -26,6 +25,14 @@ import {
 
 
 const Proyects =() => {
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [isClose, setIsClose] = useState(true);
+
+  const toggle = () => setIsOpen(!isOpen);
+  const toggle2 = () => setIsOpen(!isOpen);
+  const toggle3 = () => setIsOpen(!isOpen);
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -37,7 +44,316 @@ const Proyects =() => {
     <>
      
         <div className="section section-dark text-center">
+
         <Container>
+            <Row>
+              <Col className="ml-auto mr-auto" md="8">
+                <h2 className="title">Mis Trabajos</h2>
+                <h5 className="description">
+                Encontraras un extracto de mi trabajo, el cual fue 
+                 realizado con mucho cariño y esfuerzo para lograr siempre un impacto positivo
+                  en la vida de mi usuario, empatizando  con sus dolores, buscando la mejor solucion para ellos,
+                   diseñando y desarrollando una aplicacion personalizada para cada uno, creando una experiencia unica,
+                   gratificante y por sobre todo lograr un resultado deseable y preminente.
+                </h5>
+                <br />
+                <div  className='btnMoreInfo'>
+                    <Button onClick={toggle} style={{ marginBottom: '5rem', width:'20rem'}}  >   <img
+                   alt="..."
+                className="img-thumbnail img-no-padding img-responsive "
+                src={require("../assets/img/mockups/as2.png")}
+              />
+              </Button>
+      <Collapse isOpen={isOpen}>
+      <Collapse isClose={isClose}/>
+        <Card>
+       
+        Art Space Red Social que viene a responder las necesidades de interacción de las personas,
+        tendrás acceso a la mejor comunidad de artes manuales de Chile! Podrás crear una cuenta de 
+        acceso loguearte con ella; crear, editar, borrar y "likear" publicaciones y charlar con amigos
+
+
+        </Card>
+
+        <Row>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-album-2" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <p className="description">
+                      Spend your time generating new ideas. You don't have to
+                      think of implementing.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-bulb-63" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">New Ideas</h4>
+                    <p>
+                      Larger, yet dramatically thinner. More powerful, but
+                      remarkably power efficient.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-chart-bar-32" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Statistics</h4>
+                    <p>
+                      Choose from a veriety of many colors resembling sugar
+                      paper pastels.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-sun-fog-29" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Delightful design</h4>
+                    <p>
+                      Find unique and handmade delightful designs related items
+                      directly from our sellers.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+      </Collapse>
+    </div>
+
+
+
+
+
+    <div  className='btnMoreInfo'>
+                    <Button onClick={toggle2} style={{ marginBottom: '5rem',  width:'25rem'}}  >   <img
+                   alt="..."
+                className="img-thumbnail img-no-padding img-responsive "
+                src={require("../assets/img/mockups/bq2.png")}
+              />
+              </Button>
+      <Collapse isOpen={isOpen}>
+      <Collapse isClose={isClose}/>
+        <Card>
+       
+        Art Space Red Social que viene a responder las necesidades de interacción de las personas,
+        tendrás acceso a la mejor comunidad de artes manuales de Chile! Podrás crear una cuenta de 
+        acceso loguearte con ella; crear, editar, borrar y "likear" publicaciones y charlar con amigos
+
+
+        </Card>
+
+        <Row>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-album-2" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <p className="description">
+                      Spend your time generating new ideas. You don't have to
+                      think of implementing.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-bulb-63" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">New Ideas</h4>
+                    <p>
+                      Larger, yet dramatically thinner. More powerful, but
+                      remarkably power efficient.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-chart-bar-32" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Statistics</h4>
+                    <p>
+                      Choose from a veriety of many colors resembling sugar
+                      paper pastels.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-sun-fog-29" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Delightful design</h4>
+                    <p>
+                      Find unique and handmade delightful designs related items
+                      directly from our sellers.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+      </Collapse>
+    </div>
+
+
+
+    <div  className='btnMoreInfo'>
+                    <Button onClick={toggle3} style={{ marginBottom: '5rem',  width:'30rem' }}  >   <img
+                   alt="..."
+                className="img-thumbnail img-no-padding img-responsive "
+                src={require("../assets/img/mockups/cpt2.png")}
+              />
+              </Button>
+      <Collapse isOpen={isOpen}>
+        <Card style={{ backgroundcolor:'white' }} >
+       
+        Art Space Red Social que viene a responder las necesidades de interacción de las personas,
+        tendrás acceso a la mejor comunidad de artes manuales de Chile! Podrás crear una cuenta de 
+        acceso loguearte con ella; crear, editar, borrar y "likear" publicaciones y charlar con amigos
+
+
+        </Card>
+
+        <Row>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-album-2" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Beautiful Gallery</h4>
+                    <p className="description">
+                      Spend your time generating new ideas. You don't have to
+                      think of implementing.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-bulb-63" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">New Ideas</h4>
+                    <p>
+                      Larger, yet dramatically thinner. More powerful, but
+                      remarkably power efficient.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-chart-bar-32" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Statistics</h4>
+                    <p>
+                      Choose from a veriety of many colors resembling sugar
+                      paper pastels.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+              <Col md="3">
+                <div className="info">
+                  <div className="icon icon-info">
+                    <i className="nc-icon nc-sun-fog-29" />
+                  </div>
+                  <div className="description">
+                    <h4 className="info-title">Delightful design</h4>
+                    <p>
+                      Find unique and handmade delightful designs related items
+                      directly from our sellers.
+                    </p>
+                    <Button className="btn-link" color="info" href="#pablo">
+                      See more
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+      </Collapse>
+    </div>
+
+
+              </Col>
+            </Row>
+            <br />
+            <br />
+            
+          </Container>
+        </div>
+       
+         
+
+
+
+
+
+
+
+
+          {/* <Container>
             <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="title">Mis Trabajos</h2>
@@ -171,8 +487,8 @@ const Proyects =() => {
                
             
           
-          </Container>
-        </div>
+          </Container> */}
+   
       
      
     </>

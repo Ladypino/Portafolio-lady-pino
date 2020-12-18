@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 
 // reactstrap components
 import {
@@ -133,3 +133,4 @@ function Carousel2() {
 }
 
 export default Carousel2;
+ */

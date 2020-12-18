@@ -1,29 +1,16 @@
 
 import React from "react";
 import './about.css';
-import {NavItem,NavLink,Nav,TabContent,TabPane,Container,Row,Col,} from "reactstrap";
-import GalleryPhotos from './gallery.js'
+import {Container,Row,Col,} from "reactstrap";
+
+
+import Skills from "./Skills.js";
 
 
 
 
 const AboutMe = (props) => {
 
-  const [activeTab, setActiveTab] = React.useState("1");
-
-  const toggle = (tab) => {
-    if (activeTab !== tab) {
-      setActiveTab(tab);
-    }
-  };
-
-  document.documentElement.classList.remove("nav-open");
-  React.useEffect(() => {
-    document.body.classList.add("landing-page");
-    return function cleanup() {
-      document.body.classList.remove("landing-page");
-    };
-  });
   return (
     <>
 
@@ -56,58 +43,27 @@ const AboutMe = (props) => {
                  entorno laboral para trabajar. siendo fundamental el trato y el entusiasmo por el diseño y
                   desarrollo web.
               </p>
-              <br />
-              <h2>
-           Conoce mas
-              </h2>
+              
             </Col>
           </Row>
-          <br />
-          <div className="nav-tabs-navigation">
-            <div className="nav-tabs-wrapper">
-              <Nav role="tablist" tabs>
-            
-                
-                
-                <NavItem>
-                 
-                  <NavLink
-                    className={activeTab === "2" ? "active" : ""}
-                    onClick={() => {
-                      toggle("2");
-                    }}
-                  >
-                 Pasatiempos y Familia
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </div>
-          </div>
-          {/* Tab panes */}
-          <TabContent activeTab={activeTab}>
-            <TabPane tabId="1" id="follows">
-            
-          
+         
+         
                 <div>
  
     
-        <GalleryPhotos/>
+        <Skills/>
       
     </div>
-               
-             
-            </TabPane>
-            <TabPane className="text-center" tabId="2" id="following">
-                               <div>
+           </Container>    
+     </div>       
+      
+       
+        
     
-    </div>
-              
-            </TabPane>
-          </TabContent>
-        </Container>
-      </div>
+  
     
     </>
+  
   );
 }
 
