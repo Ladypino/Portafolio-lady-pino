@@ -1,129 +1,153 @@
-
-import React from "react";
-import "./WorkWhithMe.css"
-// reactstrap components
+import React, { Component } from "react";
+import firebaseConf from "./Firebase";
 import { Button, Container } from "reactstrap";
-import {
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Row,
-  Col,
-} from "reactstrap";
 
-// core components
+class WorkWhithMe extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      form: [],
+      alert: false,
+      alertData: {},
+    };
+  }
 
-function WorkWhithMe() {
-  let pageHeader = React.createRef();
+  showAlert(type, message) {
+    this.setState({
+      alert: true,
+      alertData: { type, message },
+    });
+    setTimeout(() => {
+      this.setState({ alert: false });
+    }, 4000);
+  }
 
-  React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
+  resetForm() {
+    this.refs.contactForm.reset();
+  }
+
+  componentWillMount() {
+    let formRef = firebaseConf
+      .database()
+      .ref("form")
+      .orderByKey()
+      .limitToLast(6);
+    formRef.on("child_added", (snapshot) => {
+      const { email, message } = snapshot.val();
+      const data = { email, message };
+      this.setState({ form: [data].concat(this.state.form) });
+    });
+  }
+
+  sendMessage(e) {
+    e.preventDefault();
+    const params = {
+      email: this.inputEmail.value,
+
+      message: this.textAreaMessage.value,
+    };
+    if (params.email && params.message) {
+      firebaseConf
+        .database()
+        .ref("form")
+        .push(params)
+        .then(() => {
+          this.showAlert("success", "Su mensaje se envió correctamente ");
+        })
+        .catch(() => {
+          this.showAlert("danger", "Su mensaje no pudo ser enviado");
+        });
+      this.resetForm();
+    } else {
+      this.showAlert("warning", "Porfavor llene todos los campos del formulario");
     }
-  });
+  }
 
-  return (
-    <>
+  render() {
+    return (
       <div
-
-
-       style={{
-         backgroundImage:
-           "url(" + require("../assets/img/ladyheader2.jpg") + ")",
-      }}
+        style={{
+          backgroundImage:
+            "url(" + require("../assets/img/ladyheader2.jpg") + ")",
+          minHeight: "120vh",
+        }}
         className="page-header"
         data-parallax={true}
-        ref={pageHeader}
       >
-
-
         <div className="filter" />
         <Container>
-
-       
-          
           <div className="motto text-center">
-          
-        
-            <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Trabaja conmigo</h2>
-                <Form className="contact-form">
-                  <Row>
-                    <Col md="6">
-                      <label>Name</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-single-02" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Name" type="text" />
-                      </InputGroup>
-                    </Col>
-                    <Col md="6">
-                      <label>Email</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-email-85" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
-                      </InputGroup>
-                    </Col>
-                  </Row>
-                  <label>Message</label>
-                  
-                  <Input
-                    placeholder="Trabajemos en equipo..."
-                    type="textarea"
-                    rows="4"
-                  />
-                  <Row>
-                    <Col className="ml-auto mr-auto" md="4">
-                    <button    className="btn-round mr-1" type='submit' className='btn btn-primary'     color="neutral"
-                   size='lg'  
-                  
-              outline >Send</button>
-                     
-                  Enviar Mensaje
-                     
+            <div>
+              {this.state.alert && (
+                <div
+                  className={`alert alert-${this.state.alertData.type}`}
+                  role="alert"
+                >
+                  <div className="container">
+                    {this.state.alertData.message}
+                  </div>
+                </div>
+              )}
+              <div className="container" style={{ padding: `40px 0px` }}>
+                <div className="row">
+                  <div className="col-sm-11">
+                    <h2>Trabajemos en Equipo</h2>
+                    <form
+                      onSubmit={this.sendMessage.bind(this)}
+                      ref="contactForm"
+                    >
+                      <div className="form-group">
+                        <label htmlFor="exampleInputEmail1">Email</label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id="email"
+                          placeholder="Email"
+                          ref={(email) => (this.inputEmail = email)}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          rows="3"
+                          placeholder="Trabajemos en Equipo..."
+                          ref={(message) => (this.textAreaMessage = message)}
+                        ></textarea>
+                      </div>
                       <Button
-              href= "https://www.canva.com/design/DAEQCbEUxvI/G8DyPpphtG6bELfsmZsFug/view?website#4"
-              
-              className="btn-round mr-1"
-              color="neutral"
-              target="_blank"
-              outline
-              size='lg'
-            >
-              <i className="fa fa-doc" />
-              Descargar CV
-            </Button>
-                    </Col>
-                  </Row>
-                </Form>
-              </Col>
-            </Row>
-            
-          
+                        type="submit"
+                        className="btn-round mr-1"
+                        color="neutral"
+                        target="_blank"
+                        outline
+                        size="ms"
+                      >
+                        Enviar Mensaje
+                      </Button>
+                      <Button
+                        href="https://www.canva.com/design/DAEQCbEUxvI/G8DyPpphtG6bELfsmZsFug/view?website#4"
+                        className="btn-round mr-1"
+                        color="neutral"
+                        target="_blank"
+                        outline
+                        size="ms"
+                      >
+                        <i className="fa fa-doc" />
+                        Descargar CV
+                      </Button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
-    </>
-  );
+    );
+  }
 }
 
 export default WorkWhithMe;
-

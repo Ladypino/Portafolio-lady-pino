@@ -1,20 +1,11 @@
 import React from "react";
-
 import classnames from "classnames";
 import  './Footer.js'
-import  './IndexNavbar.css'
+import  '../components/Styles/IndexNavbar.css'
+import { Collapse, Button, Navbar, NavItem, NavLink, Nav, Container,} from "reactstrap";
 
-import {
-  Collapse,
-  Button,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-} from "reactstrap";
 
-function NavbarPage() {
+const NavbarPage =() =>{
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [navbarCollapse, setNavbarCollapse] = React.useState(false);
 

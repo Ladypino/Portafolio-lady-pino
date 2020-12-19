@@ -1,7 +1,6 @@
 import React from "react";
-
 import { Container } from "reactstrap";
-import './IndexHeader.css'
+import "../components/Styles/IndexHeader.css";
 
 const IndexHeader = () => {
   return (
@@ -9,8 +8,7 @@ const IndexHeader = () => {
       <div
         className="page-header section-dark"
         style={{
-          backgroundImage:
-            "url(" + require("../assets/img/lady3.jpg") + ")",
+          backgroundImage: "url(" + require("../assets/img/lady3.jpg") + ")",
         }}
       >
         <div className="filter" />
@@ -26,10 +24,10 @@ const IndexHeader = () => {
               </div>
             </div>
             <h2 className="presentation-subtitle text-center">
-             Lady Pino Ramirez
+              Lady Pino Ramirez
             </h2>
             <h5 className="presentation-subtitle text-center">
-           Front end deveLoper
+              Front end deveLoper
             </h5>
           </Container>
         </div>
@@ -41,11 +39,10 @@ const IndexHeader = () => {
         />
         <h6 className="category category-absolute">
           Designed and coded by Lady Pino
-       
         </h6>
       </div>
     </>
   );
-}
+};
 
 export default IndexHeader;
