@@ -1,12 +1,12 @@
 import React from "react";
-// nodejs library that concatenates strings
+
 import classnames from "classnames";
 import  './Footer.js'
 import  './IndexNavbar.css'
-// reactstrap components
+
 import {
   Collapse,
-  NavbarBrand,
+  Button,
   Navbar,
   NavItem,
   NavLink,
@@ -83,7 +83,8 @@ function NavbarPage() {
                 title="Agregame en Linkedin"
               >
                 <i className="fa fa-linkedin" />
-                <p className="d-lg-none">Linkedin</p>
+                <p className="d-sm-none"  style={{fontWeight:'600', fontSize:'15px'}}>Linkedin</p>
+                
               </NavLink>
             </NavItem>
             
@@ -95,7 +96,7 @@ function NavbarPage() {
                 title="Conoce mi Trabajo "
               >
                 <i className="fa fa-github" />
-                <p className="d-lg-none">GitHub</p>
+                <p className="d-sm-none"  style={{fontWeight:'600', fontSize:'15px'}}>GitHub</p>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -105,8 +106,8 @@ function NavbarPage() {
                 target="_blank"
                 title="Conoceme en App Talento Laboratoria "
               >
-                <i className="fa fa-code" />
-                <p className="d-lg-none">APP Talento</p>
+                <i className="fa fa-code"/>
+                <p className="d-sm-none" style={{fontWeight:'600', fontSize:'15px'}}>APP Talento</p>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -116,10 +117,30 @@ function NavbarPage() {
                 target="_blank"
                 title="Comuniquemonos por whatsapp "
               >
-                <i className="fa fa-whatsapp" />
-                <p className="d-lg-none">Whatsapp</p>
+                <i className="fa fa-whatsapp"/>
+                <p className="d-sm-none"style={{fontWeight:'600', fontSize:'15px'}}>Whatsapp</p>
               </NavLink>
             </NavItem>
+
+            <NavItem>
+             
+                     <Button
+              href= "https://www.canva.com/design/DAEQCbEUxvI/G8DyPpphtG6bELfsmZsFug/view?website#4"
+              
+              className="btn-round mr-1"
+              color= 'neutral'
+              target="_blank"
+              outline
+              size='sm'
+              style={{marginTop: '25px', color: '#c395d5', border: 'solid', fontWeight:'600', fontSize:'15px'}}
+            >
+        
+           Ver CV
+            </Button>
+          
+            
+            </NavItem>
+           
             
             
           </Nav>

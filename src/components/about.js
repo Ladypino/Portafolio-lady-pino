@@ -33,7 +33,7 @@ const AboutMe = (props) => {
           </div>
           <Row>
             <Col className="ml-auto mr-auto text-center" md="10">
-              <p className="descriptionAbout">
+              <p className="description">
               Frontend y Traductora Bilingue con especialidad en writing and reading documents,
               Me desenvuelvo Gratamente en grupos de trabajo integrándome rápidamente,
               me motivan los desafíos de aprendizaje continuo desarrollando webs pioneras en diseños y

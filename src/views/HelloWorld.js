@@ -7,7 +7,8 @@ import NavbarPage from "../components/IndexNavbar.js";
 import  IndexHeader from "../components/IndexHeader.js";
 import  AboutMe from "../components/about.js";
 import Proyects from "../components/proyects.js";
-import WorWhithMe from "../components/WorkWhithMe.js";
+
+import Nada from "../components/nada.js";
 
 
 
@@ -26,8 +27,8 @@ const HelloWorld = (props) => {
 <IndexHeader/>
 <AboutMe/>
 <Proyects/>
+<Nada/>
 
-<WorWhithMe/>
 <Footer />
       </div>
 

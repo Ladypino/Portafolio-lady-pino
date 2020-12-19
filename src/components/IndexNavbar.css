@@ -15,3 +15,11 @@
     border: 1px solid transparent;
     border-radius: .25rem;
 }
+
+@media (max-width: 767px){
+    
+.a.btn-round.mr-1.btn.btn-outline-neutral.btn-sm{
+    width: 11rem;
+}
+}
+

@@ -1,3 +1,23 @@
-.textUl{
-    text-align: justify;
+
+
+.textTab{
+    color:rgb(0, 0, 0);
+    font-size:1.5em;
+    margin-left: -2em;
+}
+
+.tab-content>.active {
+    display: inline-block;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: initial;
+}
+.title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    min-height: 32px;
+    text-align: center;
 }

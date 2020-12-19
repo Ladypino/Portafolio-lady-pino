@@ -55,7 +55,7 @@ function WorkWhithMe() {
           <div className="motto text-center">
           
         
-          <Row>
+            <Row>
               <Col className="ml-auto mr-auto" md="8">
                 <h2 className="text-center">Trabaja conmigo</h2>
                 <Form className="contact-form">
@@ -84,22 +84,21 @@ function WorkWhithMe() {
                     </Col>
                   </Row>
                   <label>Message</label>
+                  
                   <Input
-                    placeholder="Tell us your thoughts and feelings..."
+                    placeholder="Trabajemos en equipo..."
                     type="textarea"
                     rows="4"
                   />
                   <Row>
                     <Col className="ml-auto mr-auto" md="4">
-                      <Button 
-                       className="btn-round mr-1"
-                   color="neutral"
+                    <button    className="btn-round mr-1" type='submit' className='btn btn-primary'     color="neutral"
                    size='lg'  
                   
-              outline>
-
+              outline >Send</button>
+                     
                   Enviar Mensaje
-                      </Button>
+                     
                       <Button
               href= "https://www.canva.com/design/DAEQCbEUxvI/G8DyPpphtG6bELfsmZsFug/view?website#4"
               
