@@ -83,7 +83,7 @@ function NavbarPage() {
                 title="Agregame en Linkedin"
               >
                 <i className="fa fa-linkedin" />
-                <p className="d-sm-none"  style={{fontWeight:'600', fontSize:'15px'}}>Linkedin</p>
+                <p className="d-lg-none" style={{fontWeight:'600', fontSize:'15px'}} >Linkedin</p>
                 
               </NavLink>
             </NavItem>
@@ -96,7 +96,7 @@ function NavbarPage() {
                 title="Conoce mi Trabajo "
               >
                 <i className="fa fa-github" />
-                <p className="d-sm-none"  style={{fontWeight:'600', fontSize:'15px'}}>GitHub</p>
+                <p className="d-lg-none"  style={{fontWeight:'600', fontSize:'15px'}}>GitHub</p>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -107,7 +107,7 @@ function NavbarPage() {
                 title="Conoceme en App Talento Laboratoria "
               >
                 <i className="fa fa-code"/>
-                <p className="d-sm-none" style={{fontWeight:'600', fontSize:'15px'}}>APP Talento</p>
+                <p  className="d-lg-none" style={{fontWeight:'600', fontSize:'15px'}}>APP Talento</p>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -118,7 +118,7 @@ function NavbarPage() {
                 title="Comuniquemonos por whatsapp "
               >
                 <i className="fa fa-whatsapp"/>
-                <p className="d-sm-none"style={{fontWeight:'600', fontSize:'15px'}}>Whatsapp</p>
+                <p  className="d-lg-none" style={{fontWeight:'600', fontSize:'15px'}}>Whatsapp</p>
               </NavLink>
             </NavItem>
 

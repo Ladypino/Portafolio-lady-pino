@@ -14,7 +14,20 @@
     text-align: justify;
 }
 
-
+.page-header{
+    background-color: #B2AFAB;
+    background-position: center center;
+    background-size: cover;
+    min-height: 120vh;
+ 
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 

@@ -80,25 +80,25 @@ function Skills() {
               </div>
               <img
                 alt="..."
-                className="img-thunbail img-no-padding img-responsive"
+                className="img-circle  img-no-padding img-responsive"
                 style={{ width: "5rem", margin: "4px" }}
-                src={require("../assets/img/SKILLS/l1 (3).png")}
+                src={require("../assets/img/SKILLS/l1 (28).png")}
               />
               <img
                 alt="..."
-                className="img-thunbail img-no-padding img-responsive"
+                className="img-circle  img-no-padding img-responsive"
                 style={{ width: "5rem", margin: "4px" }}
-                src={require("../assets/img/SKILLS/l1 (6).png")}
+                src={require("../assets/img/SKILLS/l1 (26).png")}
               />
               <img
                 alt="..."
-                className="img-thunbail img-no-padding img-responsive"
+                className="img-circle  img-no-padding img-responsive"
                 style={{ width: "5rem", margin: "4px" }}
                 src={require("../assets/img/SKILLS/l1 (11).png")}
               />
               <img
                 alt="..."
-                className="img-thunbail img-no-padding img-responsive"
+                className="img-circle  img-no-padding img-responsive"
                 style={{ width: "5rem", margin: "4px" }}
                 src={require("../assets/img/SKILLS/l1 (12).png")}
               />
@@ -118,84 +118,84 @@ function Skills() {
             </p>
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem"}}
-              src={require("../assets/img/SKILLS/l1 (1).png")}
+              src={require("../assets/img/SKILLS/l1 (18).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (2).png")}
             />
 
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px" , marginTop:"3rem"}}
               src={require("../assets/img/SKILLS/l1 (4).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px" , marginTop:"3rem"}}
-              src={require("../assets/img/SKILLS/l1 (5).png")}
+              src={require("../assets/img/SKILLS/l1 (24).png")}
             />
 
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (7).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (8).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px" , marginTop:"3rem"}}
               src={require("../assets/img/SKILLS/l1 (9).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (10).png")}
             />
 
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (13).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (14).png")}
             />
             <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
               src={require("../assets/img/SKILLS/l1 (15).png")}
             />
              <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
-              src={require("../assets/img/SKILLS/l1 (16).png")}
+              src={require("../assets/img/SKILLS/l1 (19).png")}
             />
              <img
               alt="..."
-              className="img-thunbail img-no-padding img-responsive"
+              className="img-circle img-no-padding img-responsive"
               style={{ width: "5rem", margin: "4px", marginTop:"3rem" }}
-              src={require("../assets/img/SKILLS/l1 (17).png")}
+              src={require("../assets/img/SKILLS/l1 (27).png")}
             />
           </TabPane>
         </TabContent>

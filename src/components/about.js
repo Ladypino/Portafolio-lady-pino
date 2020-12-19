@@ -21,7 +21,7 @@ const AboutMe = (props) => {
               <img
                 alt="..."
                 className="img-circle img-no-padding img-responsive"
-                src={require("../assets/img/carrousel/profileLady.jpg")}
+                src={require("../assets/img/carrousel/Profile.png")}
               />
             </div>
             <div className="name">

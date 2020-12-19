@@ -8,7 +8,7 @@
 
 
 .navbar-toggler {
-    padding: 0.25rem 28.75rem;
+    padding: 1.25rem 17.75rem;
     font-size: 1.25rem;
     line-height: 1;
     background-color: transparent;
@@ -21,5 +21,13 @@
 .a.btn-round.mr-1.btn.btn-outline-neutral.btn-sm{
     width: 11rem;
 }
+.navbar-collapse {
+    height: 100% !important;
+    width: 14em;
+   
+    font-variant: all-petite-caps;
 }
+
+}
+
 

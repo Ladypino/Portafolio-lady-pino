@@ -64,9 +64,9 @@ class Nada extends Component {
 
        style={{
          backgroundImage:
-           "url(" + require("../assets/img/ladyheader2.jpg") + ")",
+           "url(" + require("../assets/img/ladyheader2.jpg") + ")",   minHeight: '120vh'
       }}
-        className="page-header"
+        className="page-header" 
         data-parallax={true}
        
       >

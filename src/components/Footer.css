@@ -2,9 +2,11 @@
 
 
 @media (max-width: 767px){
-    .footer {
-        background-color:white;
-        line-height: 36px;
-        margin-top: 51em;
-    }
+  
+
+.footer {
+    background-color: white;
+    line-height: 36px;
+    margin-top: -1em;
+}
 }
