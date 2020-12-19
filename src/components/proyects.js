@@ -61,7 +61,7 @@ deseable y preeminente.
 de interacción de las personas, tendrás acceso a la mejor
 comunidad de artes manuales de Chile! Podrás crear una
 cuenta de acceso registrarte con ella; crear, editar, borrar y
-"likear" publicaciones y charlar con amigos
+"likear" publicaciones y charlar con amigos desde cualquier lugar.
 
 
                   </p>
@@ -140,7 +140,7 @@ automatizando los procesos del pedido.
 sociales, que busca salvaguardar la Seguridad Alimentaria, en
 Chile y el mundo, se resuelve problemática de los diferentes
 tipos de donación aplicando, Firebase, hooks se estructura
-página completa en diseño y funcionalidad
+página completa en diseño y funcionalidad.
 
 
 
