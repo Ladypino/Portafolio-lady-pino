@@ -50,7 +50,7 @@ deseable y preeminente.
                   <img
                     className="img  img-no-padding img-responsive "
                     style={{ width: "20rem" }}
-                    src={require("../assets/img/mockups/l1 (1).png")}
+                    src={require("../assets/img/mockups/l1 (2).png")}
                   />
                 </div>
 
@@ -92,7 +92,7 @@ cuenta de acceso registrarte con ella; crear, editar, borrar y
                   <img
                     className="img  img-no-padding img-responsive "
                     style={{ width: "20rem" }}
-                    src={require("../assets/img/mockups/l1 (2).png")}
+                    src={require("../assets/img/mockups/l1 (1).png")}
                   />
                 </div>
                 <div>
