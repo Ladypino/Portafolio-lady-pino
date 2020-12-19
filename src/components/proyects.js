@@ -26,13 +26,16 @@ const Proyects = () => {
             <Col className="ml-auto mr-auto" md="8">
               <h2 className="title">Mis Trabajos</h2>
               <h5 className="description">
-                Encontraras un extracto de mi trabajo, el cual fue realizado con
-                mucho cariño y esfuerzo para lograr siempre un impacto positivo
-                en la vida de mi usuario,empatizando con sus dolores,buscando la
-                mejor solucion para ellos, diseñando y desarrollando una
-                aplicacion personalizada para cada uno, creando una experiencia
-                unica, gratificante y por sobre todo lograr un resultado
-                deseable y preminente.
+              Encontraras un extracto de mi trabajo, el cual fue realizado con
+mucho cariño y esfuerzo para lograr siempre un impacto positivo
+en la vida de mi usuario, empatizando con sus dolores, buscando la
+mejor solución para ellos, diseñando y desarrollando una
+aplicación personalizada para cada uno, creando una experiencia
+única, gratificante y por sobre todo lograr un resultado
+deseable y preeminente.
+
+
+
               </h5>
               <br />
               <h2 className="title">Conoce mas</h2>
@@ -54,11 +57,13 @@ const Proyects = () => {
                 <div>
                   <h4 className="info-title">Art Space</h4>
                   <p className="description">
-                    Art Space Red Social que viene a responder las necesidades
-                    de interacción de las personas,tendrás acceso a la mejor
-                    comunidad de artes manuales de Chile! Podrás crear una
-                    cuenta de acceso loguearte con ella; crear, editar, borrar y
-                    "likear" publicaciones y charlar con amigos
+                  Art Space Red Social que viene a responder las necesidades
+de interacción de las personas, tendrás acceso a la mejor
+comunidad de artes manuales de Chile! Podrás crear una
+cuenta de acceso registrarte con ella; crear, editar, borrar y
+"likear" publicaciones y charlar con amigos
+
+
                   </p>
                   <Button
                     className="btn-round mr-1"
@@ -93,11 +98,12 @@ const Proyects = () => {
                 <div>
                   <h4 className="info-title">Burguer Queen</h4>
                   <p className="description">
-                    Burger Queen es un software Gastronómico ,con una interfaz
-                    para tomar pedidos usando una tablet (ver responsive IPad)
-                    ,dejando atrás las comandas escritas ,perdida o información
-                    incomprensible optimizando la organización del trabajo
-                    automatizando los procesos del pedido.
+                  Burger Queen es un software Gastronómico, con una interfaz
+para tomar pedidos usando una tablet (ver responsive iPad), dejando atrás las comandas escritas, perdida o información
+incomprensible optimizando la organización del trabajo
+automatizando los procesos del pedido.
+
+
                   </p>
                   <Button
                     className="btn-round mr-1"
@@ -130,11 +136,14 @@ const Proyects = () => {
                 <div>
                   <h4 className="info-title">Comida Para todos</h4>
                   <p className="description">
-                    "Comida para todos” Fundación que nace de organizaciones
-                    sociales,que busca salvaguardar la Seguridad Alimentaria, en
-                    Chile y el mundo,se resuelve problemática de los diferentes
-                    tipos de donación aplicando, firebase , hooks se estructura
-                    pagina completa en diseño y funcionalidad
+                  "Comida para todos” Fundación que nace de organizaciones
+sociales, que busca salvaguardar la Seguridad Alimentaria, en
+Chile y el mundo, se resuelve problemática de los diferentes
+tipos de donación aplicando, Firebase, hooks se estructura
+página completa en diseño y funcionalidad
+
+
+
                   </p>
                   <Button
                     className="btn-round mr-1"

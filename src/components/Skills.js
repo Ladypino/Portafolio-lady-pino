@@ -25,7 +25,9 @@ const Skills = () => {
                     toggle("1");
                   }}
                 >
-                  Habilidades tecnicas
+                 Habilidades técnicas
+
+
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -35,7 +37,9 @@ const Skills = () => {
                     toggle("2");
                   }}
                 >
-                  Metodologia agil
+                 Metodología ágil
+
+
                 </NavLink>
               </NavItem>
             </Nav>
@@ -44,7 +48,10 @@ const Skills = () => {
         <TabContent activeTab={activeTab} className="text-center">
           <TabPane tabId="2">
             <div className="text-center" style={{ display: "table" }}>
-              <p className="textTab"> Metodologia:</p>
+              <p className="textTab"> Metodología
+
+
+</p>
               <ul className="textUl">
                 <li>Planificación de la iteración (Sprint Planning)</li>
                 <li>Ejecución de la iteración (Sprint)</li>
@@ -62,7 +69,8 @@ const Skills = () => {
             </div>
 
             <div className="text-center">
-              <p className="textTab">Organizacion: </p>
+              <p className="textTab"> Organización:
+</p>
 
               <ul className="textUl">
                 <li>Tablero de tareas (Trello)</li>
@@ -103,15 +111,17 @@ const Skills = () => {
             style={{ marginTop: "1rem" }}
           >
             <p className="description">
-              habilidades puestas en marcha en cada uno de mis trabajos, siendo
-              fundamental mis pilares HTML.CSS,JAVASCRIPT ,posteriormente
-              adquiriendo fortalezas con frameworks en React JS y Hooks de igual
-              forma en el Backend con Node JS ,siempre de la mano con la
-              vanguardia creando Movil First con flex-box y asu vez utilizando
-              variadas bibliotecas logrando un trabajo de exelencia, de igual
-              forma el manejo en equipo siempre a sido fundamental para mi
-              utilizando un sistema de version como Git , para finalizar con
-              testeos unitarios como Jest y Mocha.{" "}
+            Habilidades puestas en marcha en cada uno de mis trabajos, siendo
+fundamental mis pilares HTML.CSS, JAVASCRIPT, posteriormente
+adquiriendo fortalezas con Frameworks en React JS y Hooks de igual
+forma en el Backend con Node JS, siempre de la mano con la
+vanguardia creando Movil First con flex-box de igual forma utilizando
+variadas bibliotecas logrando un trabajo de excelencia, de igual
+forma el manejo en equipo siempre ha sido fundamental para mí
+utilizando un sistema de versión como Git, para finalizar con
+testeos unitarios como Jest y Mocha.
+
+{" "}
             </p>
             <img
               alt="..."
